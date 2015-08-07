@@ -343,3 +343,16 @@ module.exports = MyScene;
 </body>
 </html>
 """
+# ---------------------------------------------------------------------------
+'.text.js':
+  'Dom tricks js':
+    'prefix': 'domtricks'
+    'body': """
+        var myLauncher = document.getElementById("myLauncher");
+        var myBody = myLauncher.parentNode;
+        myLauncher.parentNode.removeChild(myLauncher);
+        var myLauncherContainer = document.createElement('div');
+        myLauncherContainer.id = 'myLauncher';
+        document.getElementsByTagName('body')[0].appendChild(myLauncherContainer);
+"""
+# ---------------------------------------------------------------------------
